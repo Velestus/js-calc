@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App].
 
 This is simple **Electronic Calculator** from [freeCodeCamp.org] projects - refactored so it uses ReactJS.
 
-I have created several functions, each for numbers, decimal point, operations and equations. Due to the fact that _some buttons should have different onClick event_, I wan't generating them with usage of `Array.prototype.map()`, but just simply hard coded each of them and assigned proper function to it.
+I have created several functions, each for numbers, decimal point, operations and equations. Due to the fact that _some buttons should have different onClick event_, I wasn't generating them with usage of `Array.prototype.map()`, but just simply hard coded each of them and assigned proper function to it.
 Such solution gave me more flexibility with adapting each of those buttons' functionality.
 
 Calculator keeps track of every operation and **_calculates it after_** hitting equation mark. Every button and display field are function components. They receive onClick functions and display values from parent element, which holds and modifies state of whole application.
