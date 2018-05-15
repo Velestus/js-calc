@@ -6,7 +6,7 @@ import Button from './_components/button/button';
 import Display from './_components/display/display';
 
 class App extends Component {
-  state = { display: "0", equation: "0", calc: false, signs: ["+", "-", "/", "*", "."] }
+  state = { display: "0", equation: "0", calc: false, signs: ["+", "-", "/", "*"] }
 
   selectNumber = (value) => {
     this.setState(prevState => {
@@ -52,7 +52,8 @@ class App extends Component {
   addDecimal = (value) => {
     this.setState(prevState => ({
       display: prevState.display.indexOf(".") === -1 ? prevState.display + value : prevState.display,
-      equation: prevState.display.indexOf(".") === -1 ? prevState.equation + value : prevState.equation
+      equation: prevState.display.indexOf(".") === -1 ? prevState.equation + value : prevState.equation,
+      calc: false
     }));
   }
   calculate = () => {

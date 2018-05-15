@@ -11,14 +11,14 @@ Such solution gave me more flexibility with adapting each of those buttons' func
 
 Calculator keeps track of every operation and **_calculates it after_** hitting equation mark. Every button and display field are function components. They receive onClick functions and display values from parent element, which holds and modifies state of whole application.
 
-Calculator prevents user from assigning multiple operations withut provding values afterwards. Also, it prevents from adding several decimal points in single number.
-I have achieved that easily with usage of `Array.prototype.some()` on array containing all characters
+Calculator prevents user from assigning multiple operations without providing values afterwards. Also, it prevents from adding several decimal points in single number.
+I have achieved that easily with usage of `Array.prototype.some()` on array containing all characters.
 
-For proper assignment of new state values I have used `this.setState(prevState => ({}))` syntax. 
+For **proper assignment** of new state values I have used `this.setState(prevState => ({}))` syntax. 
 
 OnClick functions take value from clicked buttons as parameter.
 
-CSS used in this project imitates pressing real buttons. To acquire such effect I have used `box-shadow` and `transform: translateY()` properties on active buttons.
+CSS used in this project _imitates pressing real buttons_. To acquire such effect I have used `box-shadow` and `transform: translateY()` properties on active buttons.
 
 <!-- My Referrences -->
 [Create React App]: https://github.com/facebookincubator/create-react-app
