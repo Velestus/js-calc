@@ -1,5 +1,7 @@
 # Electronic Calculator
 
+![JavaScript Calculator](https://bborawski.pl/static/media/calc.jpg)
+
 This project was bootstrapped with [Create React App].
 
 ![React logo](https://blog-assets.risingstack.com/2016/Jan/react_best_practices-1453211146748.png)
