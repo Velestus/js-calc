@@ -10,7 +10,7 @@ class App extends Component {
     display: "0", 
     equation: "0", 
     calc: false, 
-    signs: ["+", "-", "/", "*", "Max digits reached"] 
+    signs: ["+", "-", "/", "*"] 
   }
 
   selectNumber = (value) => {
