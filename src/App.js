@@ -6,7 +6,12 @@ import Button from './_components/button/button';
 import Display from './_components/display/display';
 
 class App extends Component {
-  state = { display: "0", equation: "0", calc: false, signs: ["+", "-", "/", "*"] }
+  state = { 
+    display: "0", 
+    equation: "0", 
+    calc: false, 
+    signs: ["+", "-", "/", "*", "Max digits reached"] 
+  }
 
   selectNumber = (value) => {
     this.setState(prevState => {
@@ -58,8 +63,8 @@ class App extends Component {
   }
   calculate = () => {
     this.setState(prevState => ({
-      display: prevState.signs.some(sign => prevState.equation[prevState.equation.length - 1] === sign) ? prevState.display : this.round(eval(prevState.equation)).toString(),
-      equation: prevState.signs.some(sign => prevState.equation[prevState.equation.length - 1] === sign) ? prevState.equation : this.round(eval(prevState.equation)).toString(),
+      display: prevState.signs.some(sign => prevState.equation[prevState.equation.length - 1] === sign) ? prevState.display : prevState.equation === "Max digits reached" ? "0": this.round(eval(prevState.equation)).toString(),
+      equation: prevState.signs.some(sign => prevState.equation[prevState.equation.length - 1] === sign) ? prevState.equation : prevState.equation === "Max digits reached" ? "0": this.round(eval(prevState.equation)).toString(),
       calc: true
     }))
   }
